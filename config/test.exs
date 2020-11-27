@@ -6,7 +6,8 @@ config :location_chat_app, LocationChatApp.Repo,
   password: "postgres",
   database: "location_chat_app_test",
   hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox
+  pool: Ecto.Adapters.SQL.Sandbox,
+  extensions: [{Geo.PostGIS.Extension, library: Geo}]
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.

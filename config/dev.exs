@@ -2,12 +2,14 @@ use Mix.Config
 
 # Configure your database
 config :location_chat_app, LocationChatApp.Repo,
+  adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
   database: "location_chat_app_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
-  pool_size: 10
+  pool_size: 10,
+  extensions: [{Geo.PostGIS.Extension, library: Geo}]
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
