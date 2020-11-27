@@ -7,5 +7,10 @@ defmodule LocationChatAppWeb.Router do
 
   scope "/api", LocationChatAppWeb do
     pipe_through :api
+
+    scope "/auth" do
+      post "/facebook", AuthController, :facebook
+    end
+
   end
 end
