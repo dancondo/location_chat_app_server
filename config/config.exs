@@ -10,6 +10,9 @@ use Mix.Config
 config :location_chat_app,
   ecto_repos: [LocationChatApp.Repo]
 
+config :geo_postgis,
+  json_library: Jason # If you want to set your JSON module
+
 # Configures the endpoint
 config :location_chat_app, LocationChatAppWeb.Endpoint,
   url: [host: "localhost"],
