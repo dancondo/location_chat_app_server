@@ -1,4 +1,4 @@
-defmodule LocationChatApp.User do
+defmodule LocationChatApp.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
 
