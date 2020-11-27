@@ -41,6 +41,8 @@ defmodule LocationChatApp.MixProject do
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
+      {:httpoison, "~> 1.6"},
+      {:poison, "~> 3.1"},
       {:geo_postgis, "~> 3.1"},
       {:plug_cowboy, "~> 2.0"}
     ]
